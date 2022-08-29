@@ -48,16 +48,22 @@
   },
   "scripts": {
     "test": "tape test/unit/*.js",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "prepare": "npm run build",
+    "build": "npx parcel build"
   },
   "main": "dist/index.js",
   "directories": {
     "lib": "./lib"
   },
   "browser": "dist/browser.js",
-  "targets":{
-    "nodejs": {"source": "./index.js"},
-    "browser": {"source": "./lib/browser.js"}
+  "targets": {
+    "nodejs": {
+      "source": "./index.js"
+    },
+    "browser": {
+      "source": "./lib/browser.js"
+    }
   },
   "license": "Apache-2.0"
 }
