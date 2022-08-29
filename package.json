@@ -17,7 +17,7 @@
   "contributors": [
     "Iñaki Baz Castillo <ibc@aliax.net> (http://dev.sipdoc.net)"
   ],
-  "version": "1.0.34",
+  "version": "1.0.35",
   "repository": {
     "type": "git",
     "url": "https://github.com/theturtle32/WebSocket-Node.git"
@@ -38,8 +38,9 @@
     "buffer-equal": "^1.0.0",
     "gulp": "^4.0.2",
     "gulp-jshint": "^2.0.4",
-    "jshint-stylish": "^2.2.1",
     "jshint": "^2.0.0",
+    "jshint-stylish": "^2.2.1",
+    "parcel": "^2.7.0",
     "tape": "^4.9.1"
   },
   "config": {
@@ -49,10 +50,14 @@
     "test": "tape test/unit/*.js",
     "gulp": "gulp"
   },
-  "main": "index",
+  "main": "dist/index.js",
   "directories": {
     "lib": "./lib"
   },
-  "browser": "lib/browser.js",
+  "browser": "dist/browser.js",
+  "targets":{
+    "nodejs": {"source": "./index.js"},
+    "browser": {"source": "./lib/browser.js"}
+  },
   "license": "Apache-2.0"
 }
