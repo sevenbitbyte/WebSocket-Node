@@ -58,8 +58,11 @@
   },
   "browser": "dist/browser.js",
   "targets": {
-    "nodejs": {
-      "source": "./index.js"
+    "default": {
+      "context": "node",
+      "source": "./index.js",
+      "includeNodeModules": true
+
     },
     "browser": {
       "source": "./lib/browser.js"
