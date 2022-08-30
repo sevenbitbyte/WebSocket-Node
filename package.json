@@ -60,7 +60,6 @@
   "targets": {
     "default": {
       "context": "node",
-      "main": "dist/index.js",
       "source": "./index.js",
       "includeNodeModules": true
 
